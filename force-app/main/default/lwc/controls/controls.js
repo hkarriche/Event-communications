@@ -21,7 +21,7 @@ export default class Controls extends LightningElement {
 
       handleDivide(event) {
         const factor = event.target.dataset.factor;
-        this.dispatchEvent(new CustomEvent('multiply', {
+        this.dispatchEvent(new CustomEvent('divide', {
           detail: factor
         }));
       }
