@@ -1,0 +1,66 @@
+<apex:page renderAs="PDF" sidebar="false"  showHeader="false"
+standardStylesheets="false" applyBodyTag="false" applyHtmlTag="false">
+
+<head>
+    <style>
+
+            @page {
+                        
+                       /* size: A4;*/
+                        
+                       /* margin: 10mm 15mm 85mm 15mm;*/
+                        margin-top:5mm;
+                        margin-left:0mm;
+                        margin-right:5mm;
+                        margin-bottom:10mm;
+                       
+                        
+                    }
+            .page-break {
+              display:block;
+              page-break-after:always;
+          }
+        </style>
+</head>
+
+
+
+<body>
+    <div class="content">
+        <div class="page-break">
+            <table style="width:100%;">
+                <tr>
+                    <td style="width:20%"><apex:image style="width:180px;height:70px;" id="theImage" value="{!$Resource.INWIPDF_Logo}" width="100px;" height="60px;"   alt="Logo"/> </td>
+                    <td style="width:60%"></td>
+                    <td style="width:20%;color:#ad2184">Contrat du service</td>
+                </tr>
+
+            </table>
+            <table>
+              <tr>
+                  <td>N° Du contrat</td>
+                  <td style="width:15%;background-color:grey"></td>
+                  <td>رقم القيد</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+              </tr>
+              <tr>
+                <td>Type du contrat</td>
+                <td style="background-color:grey"></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            </table>
+           
+        </div>
+        <div class="page-break"> Page 2</div>
+        <div >Page 3</div>
+    </div>
+       
+  
+</body>
+
+</apex:page>
